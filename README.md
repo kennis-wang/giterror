@@ -16,7 +16,7 @@ import styles from './index.css'
  declare module "*.css"{
     const css:{[key:string]:string}
     export default css
-} 
+ } 
  
  2) 对css的文件设置文件名为xxx.module.css 
  
@@ -24,33 +24,19 @@ import styles from './index.css'
  
   import styles from './xxx.module.css'
  
-4) 在需要的组件中使用 
+ 4) 在需要的组件中使用 
  
   <div className={styles.yyy}>
-```markdown
-Syntax highlighted code block
+安装插件
+   npm install typescript-plugin-css-modules --save-dev
+配置插件
+   在根目录创建一个.vscode文件/settings
+   
+   在settings下
+   {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+}
+   解析css文件并且生成typescript所对应的引用类型
+   
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kennis-wang/giterror/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
