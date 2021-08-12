@@ -10,14 +10,20 @@ import styles from './index.css'
 <div className={styles.app}>
 # 实现方式
 ## 1) 首先声明 在根目录创建custom.d.ts
+ 
  declare module "*.css"{
     const css:{[key:string]:string}
     export default css
 }
+ 
 ## 2) 对css的文件设置文件名为xxx.module.css
+ 
 ## 3) 在需要使用样式的文件中导入
+ 
   import styles from './xxx.module.css'
+ 
 ## 4) 在需要的组件中使用
+ 
   <div className={styles.yyy}>
 
 ```markdown
